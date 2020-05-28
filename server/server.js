@@ -1,15 +1,11 @@
 const path = require('path');
 const express = require('express');
-const graphqlHTTP = require('express-graphql');
-const { buildSchema } = require('graphql');
-const { ApolloServer, gql } = require('apollo-server-express');
-import { typeDefs, resolvers } from './fixtures';
+const server = require('./apollo');
 
 const app = express();
 const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT || 3000;
 
-const server = new ApolloServer({ typeDefs, resolvers });
 server.applyMiddleware({ app });
 
 app.use(express.static(publicPath));
