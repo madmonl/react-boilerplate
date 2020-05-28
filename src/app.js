@@ -13,7 +13,7 @@ import { fetchUsers } from './actions/users'
 import ApolloClient from 'apollo-boost';
 
 export const client = new ApolloClient({
-  uri: 'http://localhost:3000',
+  uri: 'http://localhost:3000/graphql',
 });
 
 const store = configureStore();
