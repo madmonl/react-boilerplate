@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
+import Form from './Form';
+import Users from './Users';
 
-const DashboardPage = () => (
+export default () => (
   <div>
-    Dashboard page content
+    <Form />
+    <Users />
   </div>
 );
-
-export default DashboardPage;
