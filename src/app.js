@@ -11,6 +11,7 @@ import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 import { fetchUsers } from './actions/users'
 import ApolloClient from 'apollo-boost';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 export const client = new ApolloClient({
   uri: 'http://localhost:3000/graphql',
@@ -18,10 +19,13 @@ export const client = new ApolloClient({
 
 const store = configureStore();
 const jsx = (
-  <Provider store={store}>
-    <AppRouter />
-  </Provider>
+  <MuiThemeProvider>
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
+  </MuiThemeProvider>
 );
+
 let hasRendered = false;
 const renderApp = () => {
   if (!hasRendered) {

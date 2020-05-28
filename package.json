@@ -30,6 +30,7 @@
     "firebase": "4.2.0",
     "graphql": "^15.0.0",
     "history": "4.7.2",
+    "material-ui": "^0.20.1",
     "moment": "2.18.1",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
